@@ -1,0 +1,88 @@
+.do-what-you-cant {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .heading span {
+    color: #000;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .list-container {
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .list-container:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 25px;
+  }
+  
+  .list-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-container li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+  
+  .list-container li.hovered {
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+  
+  .list-container li span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .list-container hr {
+    border: none;
+    height: 2px;
+    background: black;
+    margin: 15px 0;
+    width: 100%;
+  }
+  
+  .learn-more {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .list-container li:hover .learn-more {
+    opacity: 1;
+  }
+  

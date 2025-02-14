@@ -1,0 +1,107 @@
+ 
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    width: 100%;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .color-circle:hover {
+    transform: scale(1.1);
+  }
+  
+  .storage-options {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .storage-button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .storage-button.active,
+  .storage-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .buy-button {
+    padding: 10px;
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .buy-button:hover {
+    background: #333;
+  }
+  
+  .nav-button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .nav-button:hover {
+    color: #007aff;
+  }
+  
