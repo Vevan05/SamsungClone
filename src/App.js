@@ -95,6 +95,7 @@ function App() {
       <div className='Header'>
         <img src={logo} alt="Samsung" className='Heading' />
 
+      <div className='links'>
         <nav className="nav-links">
           <a href="#">Shop</a>
           <a href="#">Mobile</a>
@@ -112,6 +113,7 @@ function App() {
           <RxPerson className="Icon" />
           <RxHamburgerMenu className="Icon" />
         </div>
+      </div>
     
     </div>
 
@@ -125,7 +127,7 @@ function App() {
 
     <div className='Highlights'>
       <div>
-        <h1 className="highlights_heading">This Week’s Highlights</h1>
+        <h1 className="highlights_heading"></h1>
         <Highlights onSelect={setSelectedTab} />
         <div>{renderContent()}</div>
       </div>
