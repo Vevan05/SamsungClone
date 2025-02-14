@@ -1,5 +1,5 @@
 .do-what-you-cant {
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
   }
@@ -23,7 +23,6 @@
   
   .image-container img {
     width: 100%;
-    max-width: 400px;
     border-radius: 10px;
   }
   
