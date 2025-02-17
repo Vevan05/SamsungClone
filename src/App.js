@@ -13,82 +13,13 @@ import Recommend from './components/Recommended';
 import DoWhatYouCant from './components/DoWhatYouCant';
 
 import images from './components/images/images';
+import footerData from './components/images/FooterData';
 
 
 function App() {
   const [search, setSearch] = useState("");
    const [selectedTab, setSelectedTab] = useState("New In");
-
-  const renderContent = () => {
-    switch (selectedTab) {
-      case "New In":
-        return <div>📢 Check out the newest arrivals!</div>;
-      case "Mobile":
-        return <div>📱 Explore the latest mobile phones.</div>;
-      case "TV":
-        return <div>📺 Browse top-notch TVs.</div>;
-      case "Appliances":
-        return <div>🍽️ Smart appliances for your home.</div>;
-      case "Ecosystem":
-        return <div>🌍 Discover the connected ecosystem.</div>;
-      case "Samsung Live":
-        return <div>🎥 Watch Samsung Live deals.</div>;
-      default:
-        return <div>Welcome to our store!</div>;
-    }
-  };
-
-  const footerData = [
-    {
-      title: "Product & Service",
-      links: [
-        "Smartphones", "Tablets", "Audio Sound", "Watches", "Smart Switch",
-        "Mobile Accessories", "TVs", "Sound Devices", "Refrigerators",
-        "Laundry", "Air Solutions", "Cooking Appliances", "Monitors", "Memory Storage"
-      ],
-    },
-    {
-      title: "Shop",
-      links: [
-        "FAQs", "Contact Us", "Welcome Voucher", "Samsung Referral Advantage",
-        "Samsung Student Advantage", "Defence Purchase Program",
-        "Corporate Employee Program", "Corporate Bulk Purchase",
-        "Samsung Experience Store", "Store Locator", "Smart Club",
-        "Terms of Use", "Order Grievance Redressal", "Explore"
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        "WhatsApp Us", "Sign Language", "Email Us", "Call Us", "Email the CEO",
-        "Community", "Product Registration", "Track Repair",
-        "Service Centre", "Share Your Opinion", "Chat with us"
-      ],
-    },
-    {
-      title: "Account & Community",
-      links: [
-        "My Page", "My Products", "Orders", "Wishlist", "Vouchers",
-        "My Referrals", "Service", "Community"
-      ],
-    },
-    {
-      title: "Sustainability",
-      links: [
-        "Environment", "Security & Privacy", "Accessibility",
-        "Diversity · Equity · Inclusion", "Corporate Citizenship",
-        "Corporate Sustainability"
-      ],
-    },
-    {
-      title: "About Us",
-      links: [
-        "Company Info", "Business Area", "Brand Identity", "Careers",
-        "Investor Relations", "Newsroom", "Ethics", "Samsung Design"
-      ],
-    }
-  ];
-
+  
   return (
     <div className="App">
 
@@ -118,10 +49,10 @@ function App() {
     </div>
 
     <div className='Slider'>
-        <CustomCarousel>
-          {images.map((image, index) => {
-            return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
-          })}
+      <CustomCarousel>
+        {images.map((image, index) => {
+          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
+        })}
       </CustomCarousel>
     </div>
 
@@ -129,14 +60,14 @@ function App() {
       <div>
         <h1 className="highlights_heading"></h1>
         <Highlights onSelect={setSelectedTab} />
-        <div>{renderContent()}</div>
-      </div>
+    </div>
+
     <div className='Recommended'>
       <h1 className="highlights_heading">Recommend Products</h1>
       <Recommend/>
     </div>
     
-    <div className='DoWhatYouWant'>
+    <div className='DoWhatYouCant'>
       <DoWhatYouCant/>
     </div>
 
@@ -168,10 +99,33 @@ function App() {
           ))}
         </div>
         <ul className="footer-notes">
-          <li>Images shown here are for representational purposes only.</li>
-          <li>Samsung account login may be required for certain AI features.</li>
-          <li>5G Devices are 5G ready, dependent on network availability.</li>
-          <li>Offers may be revised or withdrawn without prior notice.</li>
+          <li>
+            Images shown here are for representational purpose only, actual may vary. All features, specifications and prices are subject to change without prior notice. Model availability may vary from location to location.
+          </li>
+          <li>
+            Image simulated. Samsung account login may be required for certain AI features.
+          </li>
+          <li>
+            Image simulated. Available colours of Galaxy Buds3 Pro may vary by country or carrier. Galaxy Buds3 Pro supports  Galaxy AI features such as interpreter and Live Translate when paired with compatible Samsung Galaxy devices. Availability of Galaxy AI features may vary by device model. See samsung.com for details.
+          </li>
+          <li>
+            5G Devices are 5G ready, connectivity dependent on network availability.
+          </li>
+          <li>
+          S Pen Fold Edition sold separately and is only compatible with Z Fold5, Z Fold4 and Z Fold3. Flex mode supported at angles between 75˚ and 115˚.
+          </li>
+          <li>
+          Watch screen image simulated for illustrative purpose. Availability of colours, sizes, models, and watch bands may vary by country or carrier.
+          </li>
+          <li>
+            T&C Apply. Cashback at the sole discretion of the issuer / NBFC
+          </li>
+          <li>
+            Offers may be revised or withdrawn without prior notice.
+          </li>
+          <li>
+            Select offers are also available separately.
+          </li>
         </ul>
         
         <div className="footer-content">
@@ -209,7 +163,7 @@ function App() {
       </div>
 
       <div className="footer-bottom-social">
-        <span>Stay in the Loop?</span>
+        <p>Stay in the Loop?</p>
         <a href="#"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f5e8.svg" alt="Facebook" /></a>
         <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
         <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>

@@ -61,17 +61,21 @@ function CustomCarousel({ children }) {
       onMouseEnter={AutoPlayStop}
       onMouseLeave={AutoPlayStart}
     >
+      <div
+      className="slider__wrapper"
+      style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+    >
       {children.map((item, index) => {
         return (
           <div
-            className={"slider__item slider__item-active-" + (activeIndex + 1)}
+            className={`slider__item ${index === activeIndex ? "active" : ""}`}
             key={index}
-          >
+            >
             {item}
           </div>
         );
       })}
-
+  </div>
 <div className="container__slider__links">
       {children.map((item, index) => (
         <div 
@@ -81,7 +85,7 @@ function CustomCarousel({ children }) {
           onMouseLeave={() => setHoveredIndex(null)}
         >
           {hoveredIndex === index && (
-            <p className="hover-text">{image_text[index+1]}</p>
+            <p className="hover-text">{image_text[index]||"Image"}</p>
           )}
           <button
             className={

@@ -10,7 +10,6 @@
     background-color: black;
 }
 
-/* Slider Wrapper */
 .slider__wrapper {
     display: flex;
     width: 100%;
@@ -18,7 +17,6 @@
     transition: transform 0.8s ease-in-out;
 }
 
-/* Individual Slide */
 .slider__item {
     flex: 0 0 100%;
     width: 100%;
@@ -35,7 +33,10 @@
     object-fit: cover;
 }
 
-/* Navigation Buttons */
+.slider__item.active {
+    opacity: 1;
+  }
+
 .container__slider > button {
     position: absolute;
     top: 50%;
@@ -62,20 +63,18 @@
     right: 15px;
 }
 
-/* Pagination Dots */
 .container__slider__links {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 15px;
+    gap: 50px;
 }
 
 .container__slider__links-small {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    width: 100px;
+    height: 2px;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
@@ -88,7 +87,6 @@
     transform: scale(1.3);
 }
 
-/* Hover Effect */
 .button-wrapper {
     position: relative;
     display: inline-block;

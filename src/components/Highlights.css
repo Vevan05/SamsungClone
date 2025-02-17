@@ -61,7 +61,6 @@
 }
 
 .badge {
-  position: absolute;
   background: blue;
   color: white;
   padding: 5px 10px;

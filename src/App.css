@@ -1,4 +1,7 @@
-/* General Styles */
+html{
+  width:100%;
+}
+
 .App {
   background-color: #ffffff;
   width: 100%;
@@ -14,16 +17,15 @@
 }
 
 .Heading {
-  height: 40px;
+  height: 50%;
+  margin-right: 9%;
 }
 
-/* Navigation */
 .links {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  margin-left: 5%;
 }
 
 .nav-links {
@@ -43,7 +45,6 @@
   color: blue;
 }
 
-/* Icons */
 .Icons {
   display: flex;
   align-items: center;
@@ -55,21 +56,18 @@
   cursor: pointer;
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Slider */
 .Slider img {
   width: 100%;
   max-height: 500px;
   object-fit: cover;
 }
 
-/* Highlights */
 .Highlights {
   text-align: center;
   margin: 40px 0;
@@ -81,13 +79,15 @@
   margin-bottom: 20px;
 }
 
-/* Recommended */
 .Recommended {
   text-align: center;
   margin: 40px 0;
 }
 
-/* Footer */
+.DoWhatYouCant{
+  overflow: hidden;
+}
+
 .footer-container {
   text-align: center;
   background-color: #f8f8f8;
@@ -138,11 +138,10 @@
   border-radius: 5px;
 }
 
-/* Footer Notes */
 .footer-notes {
-  font-size: 14px;
+  font-size: 9px;
   text-align: left;
-  margin: 40px auto;
+  margin: 10px;
   max-width: 800px;
 }
 
@@ -150,7 +149,6 @@
   margin-bottom: 10px;
 }
 
-/* Footer Links */
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -177,7 +175,7 @@
 }
 
 .footer-column ul li {
-  font-size: 14px;
+  font-size: 9px;
   margin-bottom: 5px;
   color: #333;
   cursor: pointer;
@@ -187,11 +185,10 @@
   text-decoration: underline;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   background-color: #f8f8f8;
   padding: 15px 20px;
-  font-size: 14px;
+  font-size: 9px;
   color: #333;
   border-top: 1px solid #ddd;
   text-align: center;
@@ -218,9 +215,9 @@
 .footer-bottom-social img {
   width: 20px;
   height: 20px;
+  margin: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .Header {
     flex-direction: column;
@@ -250,12 +247,10 @@
 }
 
 @media (max-width: 768px) {
-  .Icons {
-    display: none;
-  }
 
-  .hamburger-menu {
-    display: block;
+  .Icons{
+    justify-content: flex-end;
+    width: 100%;
   }
 
   .nav-links {
@@ -315,7 +310,6 @@
   }
 }
 
-/* Font Import */
 @font-face {
   font-family: 'SamsungOne';
   src: local('SamsungOne'), url(/fonts/samsungone/SamsungSharpSans-Bold.ttf) format('truetype');

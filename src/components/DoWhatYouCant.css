@@ -1,6 +1,5 @@
 .do-what-you-cant {
     width: 100%;
-    margin: auto;
     text-align: center;
   }
   
@@ -8,58 +7,62 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
   }
-  
-  .heading span {
-    color: #000;
+
+  .heading:hover{
+    color: #808080;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
   }
+
   
   .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
   }
   
+  .image-container{
+    width: 60%;
+  }
+
   .image-container img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
   }
   
   .list-container {
     flex: 1;
     text-align: left;
-    transition: transform 0.3s ease;
-    padding: 20px;
     border-radius: 10px;
-  }
-  
-  .list-container:hover {
-    transform: scale(1.05);
-    background: rgba(0, 0, 0, 0.05);
-    padding: 25px;
   }
   
   .list-container ul {
     list-style: none;
     padding: 0;
+    border-top: #000000;
   }
   
-  .list-container li {
-    font-size: 18px;
-    margin: 10px 0;
+  .list-container div {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 0; 
+    height: 10vh; 
+    border-top: 2px solid black; 
+    transition: height 0.3s ease; 
+    width: 50%;
   }
   
-  .list-container li.hovered {
-    transform: scale(1.1);
+  .list-container div.hovered {
     font-weight: bold;
+    height: 20vh; 
   }
   
-  .list-container li span {
+  .list-container div span {
     font-weight: bold;
     margin-right: 10px;
   }
@@ -69,19 +72,41 @@
     height: 2px;
     background: black;
     margin: 15px 0;
-    width: 100%;
+    width: 70%;
   }
   
   .learn-more {
     font-weight: bold;
     text-decoration: none;
     color: black;
-    margin-left: 15px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    margin-top: 10px; 
+    transform: translateY(10px);
   }
   
   .list-container li:hover .learn-more {
     opacity: 1;
   }
   
+  .list-container div:hover .learn-more {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
+  @media (max-width: 768px){
+    .list-container div{
+      height: 3vh;
+      margin: 10px;
+      font-size: 9px;
+    }
+
+    .list-container div.hovered {
+      font-weight: bold;
+      height: 5vh; 
+    }
+    .learn-more{
+      margin-top: 1px;
+      transform: translateY(1px);
+    }
+  }
